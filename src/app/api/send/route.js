@@ -8,8 +8,8 @@ export async function POST(request) {
     console.log(email, subject, message);
 
     // Log environment variables for debugging
-    console.log("GMAIL_USER:", process.env.GMAIL_USER);
-    console.log("GMAIL_PASS:", process.env.GMAIL_PASS);
+    // console.log("GMAIL_USER:", process.env.GMAIL_USER);
+    // console.log("GMAIL_PASS:", process.env.GMAIL_PASS);
 
     const gmailUser = process.env.GMAIL_USER;
     const gmailPass = process.env.GMAIL_PASS;
