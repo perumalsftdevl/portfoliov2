@@ -2,6 +2,7 @@
 const nextConfig = {
   images: {
     domains: ["i.pinimg.com"],
+    unoptimized: true,
   },
 };
 

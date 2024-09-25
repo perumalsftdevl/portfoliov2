@@ -48,14 +48,18 @@ const HeroSection = () => {
             >
               Hire Me
             </Link>
-            <Link
-              href="https://firebasestorage.googleapis.com/v0/b/portfolio-c84b8.appspot.com/o/PerumalPResume-cropped.pdf?alt=media&token=3c8d9e4d-43d1-4345-830e-e68454fb3db9"
+            <div
+              onClick={() =>
+                window.open(
+                  "https://firebasestorage.googleapis.com/v0/b/portfolio-c84b8.appspot.com/o/PerumalPResume-cropped.pdf?alt=media&token=3c8d9e4d-43d1-4345-830e-e68454fb3db9"
+                )
+              }
               className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-800 text-white mt-3"
             >
               <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
                 Download CV
               </span>
-            </Link>
+            </div>
           </div>
         </motion.div>
         <motion.div
