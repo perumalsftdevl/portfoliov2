@@ -10,7 +10,7 @@ const projectsData = [
     title: "3D Portfolio Website",
     description:
       "This project involves building an interactive portfolio website using React and Three.js to create 3D visualizations and animations. The aim is to provide an engaging user experience that highlights personal projects, skills, and professional achievements in a unique, dynamic manner.",
-    image: "/images/projects/capture.png",
+    image: "/images/capture.png",
     tag: ["All", "Web"],
     gitUrl: "/",
     previewUrl: "https://perumalsftdevl.vercel.app/",
@@ -20,7 +20,7 @@ const projectsData = [
     title: "AI-Saas",
     description:
       "AISaaS is a dynamic SaaS application utilizing Next.js, OpenAI, Replicate, Tailwind CSS, Prisma, Clerk, and Stripe to deliver AI-powered services. It empowers users by enabling seamless integration of AI into their projects and workflow.",
-    image: "/images/projects/capture1.png",
+    image: "/images/capture1.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/perumalsftdevl/AI-Saas",
     previewUrl: "https://ai-sass-git-dev-perumalsftdevls-projects.vercel.app/",
@@ -30,7 +30,7 @@ const projectsData = [
     title: "Real Estate App: Build a Modern Marketplace.",
     description:
       "Firebase, and Google OAuth for secure access.Implement advanced authentication with JWT, Enable real-world CRUD operations for property listings, including image uploads, using MongoDB. Enhance the platform with intuitive property management features and advanced search functionality for a seamless user experience",
-    image: "/images/projects/capture2.png",
+    image: "/images/capture2.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/perumalsftdevl/Real_Estate",
     previewUrl: "https://real-estate-iupy.vercel.app/",
@@ -40,16 +40,16 @@ const projectsData = [
     title: "E-Commerce Responsive MERN Stack",
     description:
       "Build an e-commerce website with essential features like filtering, searching, adding to cart,purchasing, image zoom, and CRUD operations using Express.js and JWT authentication. Simplify development and enhance user experience with a modern, intuitive UI.",
-    image: "/images/projects/capture3.png",
+    image: "/images/capture3.png",
     tag: ["All", "Mobile"],
-    gitUrl: "/",
+    gitUrl: "https://github.com/perumalsftdevl/e-Commerce-front-end",
     previewUrl: "https://perumalsftdevls-e-commerce-front-end.vercel.app/",
   },
   // {
   //   id: 5,
   //   title: "React Firebase Template",
   //   description: "Authentication and CRUD operations",
-  //   image: "/images/projects/5.png",
+  //   image: "/images/5.png",
   //   tag: ["All", "Web"],
   //   gitUrl: "/",
   //   previewUrl: "/",
