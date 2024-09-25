@@ -11,14 +11,16 @@ const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
       {/* Image section */}
       <div className="relative h-52 md:h-72 rounded-t-xl group overflow-hidden">
         {/* Render the image directly using an <img> tag */}
-        <Image
+        {/* <Image
           src={imgUrl}
           alt={title}
           layout="fill" // Makes the image fill the container
           objectFit="cover" // Ensures the image covers the area without distortion
           quality={100} // Set image quality to 100
           className="rounded-t-xl"
-        />
+        /> */}
+        <Image src={imgUrl} alt={title} fill quality={100} />
+
         <div className="overlay items-center justify-center absolute top-0 left-0 w-full h-full bg-[#181818] bg-opacity-0 hidden group-hover:flex group-hover:bg-opacity-80 transition-all duration-500 ">
           <Link
             href={gitUrl}
