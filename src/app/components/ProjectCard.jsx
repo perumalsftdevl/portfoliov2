@@ -19,7 +19,7 @@ const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
           quality={100} // Set image quality to 100
           className="rounded-t-xl"
         /> */}
-        <Image src={imgUrl} alt={title} fill quality={100} />
+        <Image src={imgUrl} alt={title} fill quality={100} unoptimized />
 
         <div className="overlay items-center justify-center absolute top-0 left-0 w-full h-full bg-[#181818] bg-opacity-0 hidden group-hover:flex group-hover:bg-opacity-80 transition-all duration-500 ">
           <Link
