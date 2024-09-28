@@ -1,17 +1,36 @@
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
-import NextCors from "nextjs-cors";
 
 // Correct way to handle POST request in the app directory
 export async function POST(request) {
   try {
-    // Run the CORS middleware
-    await NextCors(request, NextResponse, {
-      // Options
-      methods: ["GET", "HEAD", "POST"], // Allow POST, and other methods if needed
-      origin: "*", // Allow all origins, restrict to specific domains if necessary
-      optionsSuccessStatus: 200, // For legacy browser support
-    });
+    // Manually handle CORS
+    const origin = request.headers.get("origin");
+    const allowedOrigins = [
+      "http://localhost:3000",
+      "https://perumalsftdevl.vercel.app/projects",
+      "https://perumalsftdevlportfolio.vercel.app",
+    ]; // Replace with your allowed domains
+    if (!allowedOrigins.includes(origin)) {
+      return new NextResponse(JSON.stringify({ error: "CORS not allowed" }), {
+        status: 403,
+        headers: {
+          "Access-Control-Allow-Origin": origin,
+        },
+      });
+    }
+
+    // Allow CORS for preflight request
+    if (request.method === "OPTIONS") {
+      return new NextResponse(null, {
+        headers: {
+          "Access-Control-Allow-Origin": origin,
+          "Access-Control-Allow-Methods": "GET,POST,OPTIONS",
+          "Access-Control-Allow-Headers": "Content-Type, Authorization",
+          "Access-Control-Max-Age": "86400",
+        },
+      });
+    }
 
     const { email, subject, message } = await request.json(); // Correctly parse the request body
     console.log(email, subject, message);
@@ -81,11 +100,17 @@ export async function POST(request) {
     console.log("Email sent: " + info.response);
     console.log("Reply Email sent: " + replymail.response);
 
-    return NextResponse.json({ success: "Email sent successfully." });
+    return NextResponse.json(
+      { success: "Email sent successfully." },
+      { status: 200 }
+    );
   } catch (error) {
     console.error("Error sending email:", error);
-    return NextResponse.json({
-      error: error.message || "Error sending email.",
-    });
+    return NextResponse.json(
+      {
+        error: error.message || "Error sending email.",
+      },
+      { status: 500 }
+    );
   }
 }
