@@ -8,7 +8,7 @@ export async function POST(request) {
     const origin = request.headers.get("origin");
     const allowedOrigins = [
       "http://localhost:3000",
-      "https://perumalsftdevl.vercel.app/projects",
+      "https://perumalsftdevl.vercel.app",
       "https://perumalsftdevlportfolio.vercel.app",
     ]; // Replace with your allowed domains
     if (!allowedOrigins.includes(origin)) {
