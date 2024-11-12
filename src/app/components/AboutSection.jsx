@@ -11,12 +11,27 @@ const TAB_DATA = [
     content: (
       <ul className="list-disc pl-2">
         <li>Front End - (Angular,React - (Next js))</li>
-        <li>Back End - (Express js,Spring Boot - (Hibernate))</li>
-        <li>Database - (Mongodb,MySQL)</li>
+        <li>Back End - ( Node.js,Express js,Spring Boot - (Hibernate))</li>
+        <li>Database - (MongoDB,MySQL)</li>
         <li>Javascript,Typescript </li>
         <li>Bootstrap,Tailwind Css</li>
         <li>Css</li>
         <li>Html</li>
+      </ul>
+    ),
+  },
+  {
+    title: "experience",
+    id: "experience",
+    content: (
+      <ul className="list-disc pl-2">
+        <li>
+          07-2022 - 11-2024
+          <br />
+          Developed and designed scalable web applications utilizing Angular,
+          Spring Boot, MySQL, and REST APIs and Reduced bounce rate by 87% and
+          improved load time by 87% through responsiveness optimization
+        </li>
       </ul>
     ),
   },
@@ -141,7 +156,7 @@ const TAB_DATA = [
 ];
 
 const AboutSection = () => {
-  const [tab, setTab] = useState("skills");
+  const [tab, setTab] = useState("experience");
   const [isPending, startTransition] = useTransition();
 
   const handleTabChange = (id) => {
@@ -165,6 +180,13 @@ const AboutSection = () => {
             excited to work with others to create amazing applications.
           </p>
           <div className="flex flex-row justify-start mt-8">
+            <TabButton
+              selectTab={() => handleTabChange("experience")}
+              active={tab === "experience"}
+            >
+              {" "}
+              Experience{" "}
+            </TabButton>
             <TabButton
               selectTab={() => handleTabChange("skills")}
               active={tab === "skills"}

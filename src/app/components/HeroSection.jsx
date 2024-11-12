@@ -51,7 +51,7 @@ const HeroSection = () => {
             <div
               onClick={() =>
                 window.open(
-                  "https://firebasestorage.googleapis.com/v0/b/portfolio-c84b8.appspot.com/o/PerumalPResume-cropped.pdf?alt=media&token=3c8d9e4d-43d1-4345-830e-e68454fb3db9"
+                  "https://firebasestorage.googleapis.com/v0/b/portfolio-c84b8.appspot.com/o/PerumalPResume-FullStack.pdf?alt=media&token=f4f58e30-b4c0-4131-8d60-dda691d1a49b"
                 )
               }
               className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-800 text-white mt-3"
@@ -68,13 +68,13 @@ const HeroSection = () => {
           transition={{ duration: 0.5 }}
           className="col-span-3 place-self-center mt-4 lg:mt-0"
         >
-          <div className="rounded-full bg-[#181818] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
+          <div className="rounded-full hidden bg-[#181818] w-[250px] h-[200px] lg:w-[400px] lg:h-[400px] relative">
             <Image
               src="https://i.pinimg.com/736x/e5/4d/a0/e54da0f2d4fd2eef7e269d3c14e2cbbf.jpg"
               alt="hero image"
-              className=" transform static rounded  -scale-x-100"
+              className=" transform static rounded  -scale-x-100 hidden"
               width={300}
-              height={300}
+              height={200}
             />
           </div>
         </motion.div>
