@@ -32,6 +32,16 @@ const TAB_DATA = [
           Spring Boot, MySQL, and REST APIs and Reduced bounce rate by 87% and
           improved load time by 87% through responsiveness optimization
         </li>
+        <li>
+          11-2024 - present
+          <br />I developed front-end applications using modern JavaScript
+          frameworks, enhancing UI responsiveness and improving user experience
+          by 30%. I implemented scalable back-end services with Node.js and
+          MongoDB, ensuring robust architecture and optimized performance.
+          Additionally, I worked in a product-based environment, collaborating
+          with cross-functional teams to deliver high-quality, feature-rich
+          applications.{" "}
+        </li>
       </ul>
     ),
   },
